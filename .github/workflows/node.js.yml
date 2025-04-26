@@ -24,5 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm run dev
+    - run: docker compose build
+    - run: docker compose run app npx prisma migrate dev --name init
+    - run: docker compose up
