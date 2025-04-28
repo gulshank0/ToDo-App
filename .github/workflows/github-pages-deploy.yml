@@ -31,6 +31,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: . # Deploy root directory or specify public folder
+        folder: .src # Deploy root directory or specify public folder
         branch: gh-pages
         token: ${{ secrets.GITHUB_TOKEN }}
